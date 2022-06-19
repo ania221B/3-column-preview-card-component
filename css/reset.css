@@ -1,0 +1,92 @@
+/* Sets box sizing rules */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Sets root core defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Sets body core defaults */
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Removes margins */
+
+body,
+h1,
+h2, 
+h3,
+h4,
+p,
+blockquote,
+figure,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Removes unnecessary space caused by line height */
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.1;
+}
+
+/* Gives default styling to a elements without a class */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Makes images easier to work with */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Removes default styling from ul and ol elements with the role of list */
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Makes inputs and buttons inherit font styles */
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+/* Removes animations & transitions for people who prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
