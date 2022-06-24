@@ -63,6 +63,8 @@ picture {
 ul[role="list"],
 ol[role="list"] {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Makes inputs and buttons inherit font styles */
