@@ -29,14 +29,16 @@ body {
     font-weight: var(--fw-400);
 
     background-color: var(--clr-neutral-200);
-    color: var(--clr-neutral-100);    
+    color: var(--clr-neutral-100);  
+    
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    min-height: 90vh;
-    display: grid;
-    place-items: center;
+    margin-block: auto;
 }
+
 
 .cards h2 {
     font-family: var(--ff-secondary);
@@ -66,42 +68,11 @@ button {
 
 /* ===== UTILITY ===== */
 
-.center-content {
-    display: grid;
-    place-items: center;
-}
-
 .container {
     width: 90%;
-    max-width: 59rem;
+    max-width: 58rem;
     margin-inline: auto;
-    padding-block: 3em;
-}
-
-.padding-16-block {
-    padding-block: 0.75em;
-}
-
-.padding-32-inline {
-    padding-inline: 2em;
-}
-
-.padding-32-block {
-    padding-block: 2em;
-
-}
-
-.padding-40-inline {
-    padding-inline: 2.5em;
-}
-
-.padding-56-inline {
-    padding-inline: 3.5em;
-}
-
-.padding-56-block {
-    padding-block: 3.5em;
-
+    padding-block: 1em;
 }
 
 .bg-primary-400 {
@@ -121,31 +92,39 @@ button {
 
 @media(min-width: 60em) {
     .xl-margin {
-        margin-top: 5em;
+        margin-top: 2.85em;
     }
 }
 
-
-
 /* ===== BLOCK ===== */
+
+/* ===== cards ===== */
 
 .cards {
     overflow: hidden;
     border-radius: var(--br);
 }
 
-.cards > * {
+.cards li {
     display: grid;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 2.25rem;
+
+    padding-block: 3em;
+    padding-inline: 3.25em;
 }
 
 .card__btn {
     --btn-clr-light: var(--clr-neutral-200);
     justify-self: start;
+
+    padding-block: 0.725em;
+    padding-inline: 2.125em;
+
     background-color: var(--btn-clr-light);
     color: var(--btn-clr-dark);
     border-radius: var(--br-x-large);
+
     position: relative;
     isolation: isolate;
     z-index: 1;
@@ -171,6 +150,8 @@ button {
 .card__btn:focus::after {
     opacity: 1;
 }
+
+/* ===== footer content ===== */
 
 .attribution {
     font-size: 11px;
